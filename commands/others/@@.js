@@ -32,8 +32,8 @@ function userAchieved(achiv) {
   const method = "sendMessage";
 
   const option = {
-    en: { text: `*Achievement Unlocked!* ${achiv.name}`, parse_mode: "Markdown" },
-    ru: { text: `*Достижение разблокировано!* ${achiv.name}`, parse_mode: "Markdown" }
+    en: { chat_id: user.telegramid, text: `*Achievement Unlocked!* ${achiv.name}`, parse_mode: "Markdown" },
+    ru: { chat_id: user.telegramid, text: `*Достижение разблокировано!* ${achiv.name}`, parse_mode: "Markdown" }
   };
 
   Api[method](option[systemLang]);
