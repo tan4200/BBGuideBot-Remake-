@@ -1,84 +1,70 @@
-# Cloned bot: DemoBBGuidesBot - chat bot
-It is repository for chat bot: [@Cloned bot: DemoBBGuidesBot](https://t.me/Cloned bot: DemoBBGuidesBot)
+# Bot-Business-Guide-Telegram-Bot
 
-## What it is?
-This repository can be imported to [Bots.Business](https://bots.business) as a worked chat bot.
-
-[Bots.Business](https://bots.business) - it is probably the first CBPaaS - Chat Bot Platform as a Service.
-
-A CBPaaS is a cloud-based platform that enables developers to create chatbots without needing to build backend infrastructure.
-
-## Create your own bot for Telegram from this Git repo
-
-How to create bot?
-1. Create bot with [@BotFather](https://telegram.me/BotFather) and take Secret Token
-2. Create bot in App and add Secret Token
-3. Add Public Key from App as [Deploy key](https://developer.github.com/v3/guides/managing-deploy-keys/#deploy-keys) with read access (and write access for bot exporting if you need it)
-4. Do import for this git repo
-
-Now you can talk with yours new Telegram Bot
-
-See [more](https://help.bots.business/getting-started)
-
-## Commands - in commands folder
-File name - it is command name (Bot it can be rewritten in command description)
-
-Command can have: `name`, `help`, `aliases` (second names), `answer`, `keyboard`, `scnarios` (for simple logic) and other options.
-
-### Command description
-It is file header:
-
-    /*CMD
-      command: /test
-      help: this is help for ccommand
-      need_reply: [ true or false here ]
-      auto_retry_time: [ time in sec ]
-      answer: it is example answer for /test command
-      keyboard: button1, button2
-      aliases: /test2, /test3
-    CMD*/
-
-See [more](https://help.bots.business/commands)
-
-### Command body
-It is command code in JavaScript.
-Use Bot Java Script for logic in command.
-
-For example:
-> Bot.sendMessage(2+2);
-
-See [more](https://help.bots.business/scenarios-and-bjs)
+**Bot Business Guide Telegram Bot** is designed to help users learn the **bot business** in an easy, structured, and enjoyable way. Whether you’re a beginner exploring how bots work or an admin managing your own platform, this bot provides the tools you need to learn, practice, and grow.  
 
 
-## Libraries - in libs folder
-You can store common code in the libs folder. File name - it is library name.
+## Sources 
+Demo SpreadSheet : https://docs.google.com/spreadsheets/d/1EnrDrX6D8qWJ_gkCCwvXo8xKVXCRiAa44iSUHHyEiBg/edit
 
-For example code in myLib.js:
+Demo Telegram Bot : https://t.me/DemoBBGuidesBot
 
-    function hello(){ Bot.sendMessage("Hello from lib!") }
-    function goodbye(name){ Bot.sendMessage("Goodbye, " + name) }
+---
 
-    publish({
-      sayHello: hello,
-      sayGoodbyeTo: goodbye
-    })
+## Features  
 
-then you can run in any bot's command:
+- **Step-by-step learning system** – Learn bot development and business strategies in bite-sized, easy-to-understand steps.  
+- **User-friendly interface** – Simple commands, intuitive navigation, and clear instructions for all users.  
+- **Admin control panel** – Manage content, lessons, and user data without touching the bot’s source code.    
+- **Interactive lessons** – Engaging and practical tasks that make learning more fun.  
+- **Achievement system** – Track your progress and earn badges as you master new skills.
+  
+- ### Easy Multi-language Integration
+- Admins can very easily integrate new language in the bot.
+- Spreadsheets will be automatically translated into languages added to the bot using Ai Model.
+- Users can easily change their languages.
+- Changing language will changes ("everything") expect ("proper nouns") and ("special names").
 
-    Libs.myLib.hello()
-    Libs.myLib.sayGoodbyeTo("Alice")
+---
 
-See [more](https://help.bots.business/git/library)
+##  How It Works  
 
-## Other bots example
-See other bots examples in the [github](https://github.com/bots-business?utf8=✓&tab=repositories&q=&type=public&language=javascript) or in the [Bot Store](https://bots.business/)
+1. **Start the bot** by searching for it on Telegram.  
+2. **Choose a topic** you want to learn about bot business.  
+3. **Follow lessons** step-by-step, completing tasks and answering quizzes.  
+4. **Earn achievements** for completing modules.  
+5. **Admins** can add or edit lessons using a simple content management flow with minimal coding in the app.
+
+---
+
+## Admin Panel 
+
+**/adminPanel** to use admin panel.
+Features like Modify Sheet, View Admins, Add Admins are available.
+Owner Telegram ID has to be updated first time in the bot coding.
+
+### /adminModifySheet
+
+**/adminModifySheet** is used for Modifying spreadsheets in bot.
+
+---
+
+## Setup Google App Script Account
+
+Need to create your app script account in google and create a project, add the link in the **/setup** command and run it once, All the sheets should be owned or have proper rights by the same google account.
 
 
-## Other help
-[Help.bots.business](https://help.bots.business)
+## Langauge Modification 
 
-## API
-See [API](https://api.bots.business/docs#/docs/summary)
+Admins needs to update a new language in the bot code for every texts or message by the bots. **Google Spreadsheet** updated by **/adminModifySheet** are automatically translated using google app script translator. Permission must be allowed in project.
 
+---
 
-![](https://bots.business/images/web-logo.png)
+## Technology Stack  
+
+- **Platform:** Telegram  
+- **Backend:** Bots.Business (Telegram Bot Making Platform)  
+- **Data Handling:** Google Sheets & JSON-based storing for database
+- **Content Management:** Admin-only commands with HTML/Markdown formatting  
+
+---
+
